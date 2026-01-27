@@ -2,15 +2,15 @@ from enum import Enum
 from collections import deque
 
 class Color(Enum):
+    RED: int = 16
+    ORANGE: int = 13
+    YELLOW: int = 7
+    GREEN: int = 2
+    
     CYAN: int = -3
     LBLUE: int = -6
     DBLUE: int = -9
     PURPLE: int = -15
-
-    GREEN: int = 2
-    YELLOW: int = 7
-    ORANGE: int = 13
-    RED: int = 16
 
 # Get a list of colors from a completed "visited" dict
 def countsFromVisited(target: int, visited: dict[int, Color | None]):
@@ -50,11 +50,19 @@ def findCounts(target: int):
         for color in Color:
             toVisit.append((current + color.value, color))
 
-            
+# prints an easy to read representation of the counts
+def presentCounts(counts):
+    for colorname, count in counts.items():
+        if count > 0:
+            print(f"{colorname}:\t{count}")
 
 
 def main():
-    target = int(input("giv me number: "))
-    print(findCounts(target))
+    while True:
+        target = int(input("Type Goal number (0 to stop): "))
+        if target == 0:
+            break
+        presentCounts(findCounts(target))
+        
 
 main()
