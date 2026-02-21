@@ -1,6 +1,7 @@
 from enum import Enum
 from collections import deque
 
+# Color "costs"
 class Color(Enum):
     RED: int = 16
     ORANGE: int = 13
