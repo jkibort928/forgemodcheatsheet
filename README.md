@@ -1,5 +1,5 @@
 # forgemodcheatsheet
-Calculates the cheapest sequence of colors to forge stuff
+Calculates the cheapest sequence of colors to forge stuff. Some minecraft mod my friend needed help with, know nothing else about it lol.
 
 ## Installation for Windows
 The easiest way to use this tool is to download the pre-built executable:
